@@ -9,7 +9,56 @@ function scrollToSection(id) {
   }
 }
 
-// Animação simples da barra de XP ao carregar
+
+// =========================================
+// THEME
+// =========================================
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+function setTheme(theme) {
+  if (theme === "light") {
+    document.body.classList.add("light-theme");
+    themeIcon.textContent = "🌙";
+    themeToggle.setAttribute("aria-label", "Ativar tema escuro");
+  } else {
+    document.body.classList.remove("light-theme");
+    themeIcon.textContent = "☀️";
+    themeToggle.setAttribute("aria-label", "Ativar tema claro");
+  }
+
+  localStorage.setItem("freelaxp-theme", theme);
+}
+
+
+// Recupera o tema salvo
+const savedTheme = localStorage.getItem("freelaxp-theme");
+
+if (savedTheme) {
+  setTheme(savedTheme);
+} else {
+  // Usa a preferência do sistema operacional
+  const prefersLight = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
+
+  setTheme(prefersLight ? "light" : "dark");
+}
+
+
+// Alterna o tema
+themeToggle.addEventListener("click", () => {
+  const isLight = document.body.classList.contains("light-theme");
+
+  setTheme(isLight ? "dark" : "light");
+});
+
+
+// =========================================
+// XP ANIMATION
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const progress = document.querySelector(".xp-progress");
 
@@ -22,7 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // Animação dos cards ao entrar na viewport
+
+  // =========================================
+  // PROJECT CARDS ANIMATION
+  // =========================================
+
   const cards = document.querySelectorAll(".project-card");
 
   const observer = new IntersectionObserver(
@@ -35,13 +88,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.15 }
+    {
+      threshold: 0.15
+    }
   );
 
   cards.forEach((card) => {
     card.style.opacity = "0";
     card.style.transform = "translateY(20px)";
-    card.style.transition = "opacity .5s ease, transform .5s ease";
+    card.style.transition =
+      "opacity .5s ease, transform .5s ease";
 
     observer.observe(card);
   });
