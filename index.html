@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FreelaXP — transforme seus freelas em uma jornada.">
+  <title>FreelaXP — Freelance Gamificado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">✦</span>
+      Freela<span>XP</span>
+    </a>
+
+    <nav>
+      <a href="#explore">Explorar</a>
+      <a href="#ranking">Ranking</a>
+      <a href="#como-funciona">Como funciona</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-login">Entrar</button>
+      <button class="btn-primary">Começar agora</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="pulse"></span>
+          A nova era do freelance
+        </div>
+
+        <h1>
+          Trabalhe.<br>
+          <span>Suba de nível.</span>
+        </h1>
+
+        <p>
+          Uma plataforma de freelancers onde cada projeto vira XP,
+          cada conquista desbloqueia recompensas e sua carreira evolui como um jogo.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary btn-large" onclick="scrollToSection('explore')">
+            Encontrar projetos <span>→</span>
+          </button>
+          <button class="btn-secondary btn-large">
+            Quero contratar
+          </button>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div>👨🏽‍💻</div>
+            <div>👩🏻‍🎨</div>
+            <div>👨🏼‍🚀</div>
+            <div>👩🏽‍💻</div>
+          </div>
+          <div>
+            <strong>12.8k+</strong>
+            <small>freelancers ativos</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dashboard">
+        <div class="glow"></div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-top">
+            <div>
+              <span class="mini-label">SEU PROGRESSO</span>
+              <h3>Nível 24 <span>⚡</span></h3>
+            </div>
+            <div class="level-circle">24</div>
+          </div>
+
+          <div class="xp-info">
+            <span>3.240 XP</span>
+            <span>4.000 XP</span>
+          </div>
+
+          <div class="xp-bar">
+            <div class="xp-progress"></div>
+          </div>
+
+          <div class="dashboard-stats">
+            <div>
+              <strong>47</strong>
+              <span>Projetos</span>
+            </div>
+            <div>
+              <strong>4.9</strong>
+              <span>Avaliação</span>
+            </div>
+            <div>
+              <strong>98%</strong>
+              <span>Entrega</span>
+            </div>
+          </div>
+
+          <div class="quest">
+            <div class="quest-icon">🎯</div>
+            <div class="quest-text">
+              <small>MISSÃO ATUAL</small>
+              <strong>Complete 3 projetos esta semana</strong>
+              <div class="quest-progress">
+                <span></span>
+              </div>
+              <em>2 / 3 concluídos</em>
+            </div>
+            <b>+500 XP</b>
+          </div>
+        </div>
+
+        <div class="floating-card achievement">
+          <span>🏆</span>
+          <div>
+            <small>CONQUISTA</small>
+            <strong>Cliente Fiel</strong>
+          </div>
+        </div>
+
+        <div class="floating-card xp-pop">
+          <strong>+250 XP</strong>
+          <span>Projeto concluído!</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div>⚡ GANHE XP</div>
+      <div>🏆 DESBLOQUEIE CONQUISTAS</div>
+      <div>💰 AUMENTE SEUS GANHOS</div>
+      <div>🚀 EVOLUA SUA CARREIRA</div>
+      <div>⚡ GANHE XP</div>
+      <div>🏆 DESBLOQUEIE CONQUISTAS</div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">PROJETOS EM DESTAQUE</span>
+          <h2>Encontre sua próxima <span>quest.</span></h2>
+        </div>
+        <button class="filter-btn">Todos os projetos ▾</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-category purple">DESIGN</span>
+            <span class="xp-tag">+850 XP</span>
+          </div>
+          <h3>Identidade visual para startup de tecnologia</h3>
+          <p>Precisamos de um designer para criar uma identidade visual completa...</p>
+          <div class="project-footer">
+            <div class="client">
+              <div class="client-avatar">N</div>
+              <span>NovaTech</span>
+              <b>★ 4.9</b>
+            </div>
+            <strong>R$ 2.500</strong>
+          </div>
+        </article>
+
+        <article class="project-card featured">
+          <div class="project-header">
+            <span class="project-category green">DESENVOLVIMENTO</span>
+            <span class="xp-tag">+1.200 XP</span>
+          </div>
+          <h3>Landing page em React + Next.js</h3>
+          <p>Desenvolvimento de landing page moderna, rápida e responsiva...</p>
+          <div class="project-footer">
+            <div class="client">
+              <div class="client-avatar orange">V</div>
+              <span>VentureLab</span>
+              <b>★ 5.0</b>
+            </div>
+            <strong>R$ 4.800</strong>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-category blue">MARKETING</span>
+            <span class="xp-tag">+600 XP</span>
+          </div>
+          <h3>Estratégia de conteúdo para Instagram</h3>
+          <p>Criação de calendário editorial e estratégia para aumentar...</p>
+          <div class="project-footer">
+            <div class="client">
+              <div class="client-avatar pink">M</div>
+              <span>MoveFit</span>
+              <b>★ 4.8</b>
+            </div>
+            <strong>R$ 1.800</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-funciona">
+      <div class="center-heading">
+        <span class="eyebrow">COMO FUNCIONA</span>
+        <h2>Seu trabalho virou um <span>jogo.</span></h2>
+        <p>Quanto mais você entrega, mais você desbloqueia.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-icon">🎮</div>
+          <h3>Aceite uma quest</h3>
+          <p>Escolha projetos alinhados às suas habilidades e objetivos.</p>
+        </div>
+
+        <div class="step-line"></div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-icon">⚡</div>
+          <h3>Ganhe XP</h3>
+          <p>Entregue trabalhos incríveis e acumule experiência.</p>
+        </div>
+
+        <div class="step-line"></div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-icon">🏆</div>
+          <h3>Suba de nível</h3>
+          <p>Desbloqueie benefícios, badges e projetos exclusivos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ranking-section" id="ranking">
+      <div class="ranking-header">
+        <div>
+          <span class="eyebrow">RANKING SEMANAL</span>
+          <h2>Quem está <span>dominando</span> as quests?</h2>
+        </div>
+        <span class="season">🔥 Temporada 12</span>
+      </div>
+
+      <div class="ranking-list">
+        <div class="rank-item">
+          <span class="position gold">01</span>
+          <div class="rank-avatar">👩🏻‍💻</div>
+          <div class="rank-user">
+            <strong>Marina Costa</strong>
+            <span>Designer · Nível 38</span>
+          </div>
+          <div class="rank-xp">8.420 XP</div>
+        </div>
+
+        <div class="rank-item">
+          <span class="position silver">02</span>
+          <div class="rank-avatar">👨🏽‍💻</div>
+          <div class="rank-user">
+            <strong>Lucas Almeida</strong>
+            <span>Dev · Nível 35</span>
+          </div>
+          <div class="rank-xp">7.890 XP</div>
+        </div>
+
+        <div class="rank-item">
+          <span class="position bronze">03</span>
+          <div class="rank-avatar">👩🏽‍🎨</div>
+          <div class="rank-user">
+            <strong>Julia Martins</strong>
+            <span>Copywriter · Nível 31</span>
+          </div>
+          <div class="rank-xp">7.240 XP</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-glow"></div>
+      <span class="eyebrow">PRONTO PARA COMEÇAR?</span>
+      <h2>Sua próxima grande <span>quest</span><br>começa agora.</h2>
+      <p>Crie seu perfil gratuitamente e comece a transformar seu talento em XP.</p>
+      <button class="btn-primary btn-large">Criar meu perfil <span>→</span></button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <a href="#" class="logo">
+        <span class="logo-icon">✦</span>
+        Freela<span>XP</span>
+      </a>
+      <p>Freelance, só que muito mais divertido.</p>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <strong>Plataforma</strong>
+        <a href="#">Explorar projetos</a>
+        <a href="#">Ranking</a>
+        <a href="#">Conquistas</a>
+      </div>
+      <div>
+        <strong>Empresa</strong>
+        <a href="#">Sobre nós</a>
+        <a href="#">Carreiras</a>
+        <a href="#">Contato</a>
+      </div>
+      <div>
+        <strong>Legal</strong>
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+      </div>
+    </div>
+
+    <div class="copyright">© 2026 FreelaXP</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
