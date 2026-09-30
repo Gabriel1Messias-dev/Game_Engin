@@ -976,3 +976,136 @@ footer {
     gap: 20px;
   }
 }
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: .25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: rgba(139, 92, 246, .12);
+  border-color: rgba(139, 92, 246, .3);
+}
+
+.theme-icon {
+  font-size: 17px;
+  transition: transform .3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: rotate(20deg) scale(1.1);
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+body.light-theme {
+  --bg: #f5f6fa;
+  --card: #ffffff;
+  --card-light: #f0f1f6;
+  --text: #171821;
+  --muted: #697080;
+  --purple: #7041e8;
+  --purple-light: #7041e8;
+  --green: #07966a;
+  --border: rgba(20, 22, 30, .10);
+}
+
+body.light-theme {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.light-theme .navbar {
+  background: rgba(245, 246, 250, .85);
+}
+
+body.light-theme .ticker,
+body.light-theme .how-section {
+  background: #eceef4;
+}
+
+body.light-theme .dashboard-card,
+body.light-theme .project-card,
+body.light-theme .rank-item,
+body.light-theme .filter-btn,
+body.light-theme .theme-toggle,
+body.light-theme .floating-card {
+  background: #ffffff;
+  color: var(--text);
+}
+
+body.light-theme .dashboard-card {
+  box-shadow: 0 25px 70px rgba(30, 32, 45, .12);
+}
+
+body.light-theme .dashboard-stats,
+body.light-theme .project-footer {
+  border-color: var(--border);
+}
+
+body.light-theme .project-card.featured {
+  background: linear-gradient(145deg, #ffffff, #f6f3ff);
+  border-color: rgba(112, 65, 232, .2);
+}
+
+body.light-theme .btn-secondary {
+  background: #ffffff;
+  color: #333641;
+  border-color: rgba(20, 22, 30, .12);
+}
+
+body.light-theme .btn-login {
+  color: #424552;
+}
+
+body.light-theme .ticker {
+  border-color: var(--border);
+  color: #666b78;
+}
+
+body.light-theme .step-icon {
+  background: #ffffff;
+}
+
+body.light-theme .cta {
+  background: linear-gradient(145deg, #ffffff, #f3efff);
+  border-color: rgba(112, 65, 232, .18);
+}
+
+body.light-theme footer {
+  background: #f5f6fa;
+}
+
+body.light-theme .xp-bar,
+body.light-theme .quest-progress {
+  background: #e2e3e9;
+}
+
+body.light-theme .achievement,
+body.light-theme .xp-pop {
+  box-shadow: 0 15px 40px rgba(30, 32, 45, .12);
+}
+
+body.light-theme .hero::before {
+  background: radial-gradient(
+    circle,
+    rgba(112, 65, 232, .12),
+    transparent 68%
+  );
+}
+
